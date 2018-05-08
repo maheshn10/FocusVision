@@ -8,10 +8,12 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Script.Serialization;
 using FocusVision.Models;
+using System.Web.Http.Cors;
 
 namespace FocusVision.Controllers
 {
     [Authorize]
+    //[EnableCorsAttribute("*", "*", "*")]
     public class FocusVisionController : ApiController
     {
         public List<FocusVisionModels> Get()
